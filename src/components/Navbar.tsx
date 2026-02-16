@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+import Logo from "./Logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -19,9 +19,7 @@ export default function Navbar() {
         className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
         aria-label="Main navigation"
       >
-        <Link href="/" className="text-xl font-bold text-neutral-900">
-          Flo<span className="text-brand-500">Stead</span>
-        </Link>
+        <Logo />
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-8 md:flex">

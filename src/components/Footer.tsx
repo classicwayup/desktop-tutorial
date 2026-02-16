@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "./Logo";
 
 const footerLinks = {
   Company: [
@@ -21,9 +22,7 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="text-xl font-bold text-neutral-900">
-              Flo<span className="text-brand-500">Stead</span>
-            </Link>
+            <Logo />
             <p className="mt-3 text-sm leading-relaxed text-neutral-500">
               Workflow systems &amp; automation studio for nonprofits. Make work
               feel steady again.
