@@ -1,0 +1,10 @@
+<!-- FloStead Logo Concept 1: Flow Lines -->
+<svg width="400" height="120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Flow Lines forming an F -->
+  <rect x="40" y="30" width="60" height="8" rx="4" fill="#2E75B6"/>
+  <rect x="40" y="56" width="45" height="8" rx="4" fill="#4A8FD0"/>
+  <rect x="40" y="82" width="30" height="8" rx="4" fill="#6BA9E0"/>
+  
+  <!-- FloStead Text -->
+  <text x="120" y="70" font-family="Arial, sans-serif" font-size="36" font-weight="600" fill="#2E75B6">FloStead</text>
+</svg>
