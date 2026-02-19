@@ -13,6 +13,7 @@ const freeTemplates = [
     description:
       "A ready-to-use template for documenting your core program delivery process step by step.",
     format: "Google Docs",
+    microsoftFormat: "Word (.docx)",
     downloadUrl: "https://docs.google.com/document/d/flostead-sop-program-delivery",
   },
   {
@@ -20,6 +21,7 @@ const freeTemplates = [
     description:
       "Streamline new hire onboarding with this comprehensive checklist covering day 1 through week 4.",
     format: "Google Sheets",
+    microsoftFormat: "Excel (.xlsx)",
     downloadUrl: "https://docs.google.com/spreadsheets/d/flostead-onboarding-checklist",
   },
   {
@@ -27,6 +29,7 @@ const freeTemplates = [
     description:
       "Map out your volunteer intake, scheduling, and follow-up process in one clear workflow.",
     format: "Miro Template",
+    microsoftFormat: "PDF version",
     downloadUrl: "https://miro.com/templates/flostead-volunteer-coordination",
   },
 ];
@@ -37,6 +40,7 @@ const premiumTemplates = [
     description:
       "A self-guided worksheet to evaluate the health of any internal process and identify quick wins.",
     format: "Google Docs",
+    microsoftFormat: "Word (.docx)",
     price: "$17",
     gumroadUrl: "https://flostead.gumroad.com/l/process-audit-worksheet",
   },
@@ -45,6 +49,7 @@ const premiumTemplates = [
     description:
       "A clean, professional template for presenting program metrics and financials to your board.",
     format: "Google Slides",
+    microsoftFormat: "PowerPoint (.pptx)",
     price: "$27",
     gumroadUrl: "https://flostead.gumroad.com/l/board-report-template",
   },
@@ -53,6 +58,7 @@ const premiumTemplates = [
     description:
       "Step-by-step instructions to automate thank-you emails and tax receipts for donors — set it up once, runs forever.",
     format: "PDF Guide",
+    microsoftFormat: null,
     price: "$37",
     gumroadUrl: "https://flostead.gumroad.com/l/donor-automation-guide",
   },
@@ -92,6 +98,10 @@ export default function ResourcesPage() {
             Free templates to get you started, and premium resources for deeper
             impact — all instant access, no&nbsp;waiting.
           </p>
+          <p className="mt-3 text-sm text-neutral-500">
+            All templates are compatible with both Google Workspace and Microsoft
+            Office.
+          </p>
         </div>
       </section>
 
@@ -118,9 +128,14 @@ export default function ResourcesPage() {
                 key={t.title}
                 className="flex flex-col rounded-xl border border-neutral-200 p-6 transition-shadow hover:shadow-md"
               >
-                <span className="inline-block w-fit rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-600">
-                  {t.format}
-                </span>
+                <div className="flex flex-wrap gap-2">
+                  <span className="inline-block rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-600">
+                    {t.format}
+                  </span>
+                  <span className="inline-block rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-500">
+                    {t.microsoftFormat}
+                  </span>
+                </div>
                 <h3 className="mt-3 text-base font-semibold text-neutral-900">
                   {t.title}
                 </h3>
@@ -150,8 +165,8 @@ export default function ResourcesPage() {
                 Premium Templates
               </h2>
               <p className="mt-2 text-neutral-600">
-                Higher-impact resources for teams ready to go deeper. Instant
-                access via Gumroad.
+                Higher-impact resources for teams ready to go deeper. Both Google
+                and Microsoft formats included. Instant access via Gumroad.
               </p>
             </div>
             <span className="hidden shrink-0 rounded-full bg-brand-500 px-3 py-1 text-xs font-semibold text-white sm:inline-block">
@@ -165,9 +180,16 @@ export default function ResourcesPage() {
                 className="flex flex-col rounded-xl border border-brand-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
               >
                 <div className="flex items-start justify-between gap-2">
-                  <span className="inline-block w-fit rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-600">
-                    {t.format}
-                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="inline-block rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-600">
+                      {t.format}
+                    </span>
+                    {t.microsoftFormat && (
+                      <span className="inline-block rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-500">
+                        {t.microsoftFormat}
+                      </span>
+                    )}
+                  </div>
                   <span className="shrink-0 text-lg font-bold text-brand-500">
                     {t.price}
                   </span>
@@ -178,6 +200,11 @@ export default function ResourcesPage() {
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">
                   {t.description}
                 </p>
+                {t.microsoftFormat && (
+                  <p className="mt-3 text-xs text-neutral-400">
+                    Both formats included in download.
+                  </p>
+                )}
                 <a
                   href={t.gumroadUrl}
                   target="_blank"

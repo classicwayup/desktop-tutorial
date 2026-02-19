@@ -34,7 +34,7 @@ const faqs = [
       },
       {
         q: "What formats do the templates come in?",
-        a: "Templates are delivered as Google Docs, Google Sheets, Google Slides, or Miro templates depending on the product. You'll receive a link to copy the file directly into your own Google Drive or Miro account.",
+        a: "All templates are compatible with both Google Workspace and Microsoft Office. Free templates are Google Docs, Google Sheets, or Miro — you can download any Google file as Word (.docx) or Excel (.xlsx) directly from Google. Premium templates include both the Google version and the Microsoft Office version (Word, Excel, or PowerPoint) in the same download. The Volunteer Coordination Workflow (Miro) also includes a PDF version for non-Miro users.",
       },
       {
         q: "Can I customize the templates for my organization?",
