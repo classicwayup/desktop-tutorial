@@ -11,6 +11,7 @@ const footerLinks = {
   ],
   Resources: [
     { href: "/resources#templates", label: "Free Templates" },
+    { href: "/resources#premium-templates", label: "Premium Templates" },
     { href: "/resources#blog", label: "Blog" },
     { href: "/resources#case-studies", label: "Case Studies" },
     { href: "https://tally.so/r/flostead-support", label: "Support Ticket" },
