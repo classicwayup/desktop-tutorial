@@ -61,7 +61,7 @@ const products = [
       "Written audit report (10-15 pages)",
       "Prioritized action plan with quick wins",
       "Tool & automation recommendations",
-      "30-min follow-up video call",
+      "Recorded video summary of findings (20 min)",
     ],
     gumroadUrl: "https://flostead.gumroad.com/l/mini-audit",
     highlighted: false,
