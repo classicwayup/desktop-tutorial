@@ -81,12 +81,10 @@ export default function HomePage() {
               Get the Free SOP Starter Kit
             </a>
             <a
-              href="https://calendly.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/products"
               className="rounded-lg border border-neutral-300 px-8 py-3.5 text-sm font-medium text-neutral-700 transition-colors hover:border-brand-500 hover:text-brand-500"
             >
-              Book a 15-Min Call
+              Browse Toolkits
             </a>
           </div>
         </div>
@@ -206,17 +204,14 @@ export default function HomePage() {
             Ready to make work feel steady?
           </h2>
           <p className="mt-4 text-brand-100">
-            Book a free 15-minute call. We&apos;ll talk through what&apos;s
-            slowing your team down and map out next steps — no pressure, no
-            pitch.
+            Pick up a ready-made toolkit and start fixing your operations
+            today — no waiting, no back-and-forth.
           </p>
           <a
-            href="https://calendly.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/products"
             className="mt-8 inline-block rounded-lg bg-white px-8 py-3.5 text-sm font-medium text-brand-600 transition-colors hover:bg-neutral-100"
           >
-            Book Your Free Call
+            Browse Products
           </a>
         </div>
       </section>

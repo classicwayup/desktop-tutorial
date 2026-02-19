@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -131,19 +130,22 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Contact Form */}
+      {/* Self-serve CTA */}
       <section className="bg-neutral-50 py-20">
-        <div className="mx-auto max-w-2xl px-6">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
-            Let&apos;s Talk
+        <div className="mx-auto max-w-2xl px-6 text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
+            Not sure where to start?
           </h2>
-          <p className="mt-4 text-center text-neutral-600">
-            Tell us a bit about your organization and what you&apos;re looking
-            for. We&apos;ll get back to you within one business day.
+          <p className="mt-4 text-neutral-600">
+            Browse our ready-made toolkits — most organizations find exactly
+            what they need without any custom work.
           </p>
-          <div className="mt-10">
-            <ContactForm />
-          </div>
+          <a
+            href="/products"
+            className="mt-8 inline-block rounded-lg bg-brand-500 px-8 py-3.5 text-sm font-medium text-white transition-colors hover:bg-brand-600"
+          >
+            Browse Products
+          </a>
         </div>
       </section>
     </>
