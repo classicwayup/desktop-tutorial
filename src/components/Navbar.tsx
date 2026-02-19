@@ -36,12 +36,10 @@ export default function Navbar() {
           ))}
           <li>
             <a
-              href="https://calendly.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/products"
               className="rounded-lg bg-brand-500 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brand-600"
             >
-              Book a Call
+              Get Started
             </a>
           </li>
         </ul>
@@ -83,12 +81,10 @@ export default function Navbar() {
             ))}
             <li>
               <a
-                href="https://calendly.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/products"
                 className="inline-block rounded-lg bg-brand-500 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brand-600"
               >
-                Book a Call
+                Get Started
               </a>
             </li>
           </ul>
