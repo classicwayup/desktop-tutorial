@@ -11,14 +11,14 @@ const services = [
     name: "Flow Audit",
     price: "$2,500",
     description:
-      "A comprehensive review of your organization's workflows, tools, and team processes. We identify inefficiencies, map your current state, and deliver a detailed roadmap for improvement.",
+      "A comprehensive review of your organization's workflows, tools, and team processes. Submit your info asynchronously and receive a detailed roadmap for improvement — no meetings required.",
     deliverables: [
-      "Stakeholder interviews (up to 5 team members)",
+      "Async intake questionnaire & process submission",
       "Current-state workflow mapping",
       "Tool & technology assessment",
       "Detailed audit report with findings",
       "Prioritized improvement roadmap",
-      "90-min strategy presentation",
+      "Recorded video walkthrough of findings (30 min)",
     ],
     ideal: "Organizations that know something is broken but aren't sure where to start.",
   },
@@ -26,14 +26,14 @@ const services = [
     name: "Flow Build",
     price: "$7,500 – $12,500",
     description:
-      "We design and implement your new workflow systems end-to-end. From SOPs and automations to team training — we build it, test it, and hand it over ready to run.",
+      "We design and implement your new workflow systems end-to-end. From SOPs and automations to recorded training — we build it, test it, and hand it over ready to run.",
     deliverables: [
       "Custom workflow design & documentation",
       "Automation setup (Zapier, Make, or native tools)",
       "SOP creation for all new processes",
       "Tool configuration & integration",
-      "Team training sessions (up to 3)",
-      "30-day post-launch support",
+      "Recorded training library for your team",
+      "30-day post-launch async support",
     ],
     ideal: "Teams ready to overhaul their operations and invest in long-term systems.",
   },
@@ -41,16 +41,16 @@ const services = [
     name: "FloSteady Retainer",
     price: "$2,000/month",
     description:
-      "Ongoing workflow support so your systems stay current as your organization grows. We handle updates, troubleshoot issues, and continuously optimize your processes.",
+      "Ongoing workflow support so your systems stay current as your organization grows. Submit requests anytime — we handle updates, fixes, and optimizations on your schedule.",
     deliverables: [
       "Monthly workflow health check",
       "Up to 10 hours of support per month",
       "Automation maintenance & updates",
       "New SOP creation as needed",
-      "Priority email & Slack support",
-      "Quarterly strategy review call",
+      "Async support via ticket portal",
+      "Quarterly written strategy review",
     ],
-    ideal: "Organizations that want a dedicated operations partner on call.",
+    ideal: "Organizations that want a dedicated operations partner without the overhead.",
   },
 ];
 
