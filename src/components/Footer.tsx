@@ -7,11 +7,13 @@ const footerLinks = {
     { href: "/products", label: "Products" },
     { href: "/services", label: "Services" },
     { href: "/resources", label: "Resources" },
+    { href: "/faq", label: "FAQ" },
   ],
   Resources: [
     { href: "/resources#templates", label: "Free Templates" },
     { href: "/resources#blog", label: "Blog" },
     { href: "/resources#case-studies", label: "Case Studies" },
+    { href: "https://tally.so/r/flostead-support", label: "Support Ticket" },
   ],
 };
 

@@ -130,22 +130,80 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Self-serve CTA */}
-      <section className="bg-neutral-50 py-20">
+      {/* How custom work happens */}
+      <section className="bg-neutral-50 py-16">
+        <div className="mx-auto max-w-4xl px-6">
+          <h2 className="text-center text-2xl font-bold tracking-tight text-neutral-900 sm:text-3xl">
+            How custom work happens — no calls required
+          </h2>
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+            {[
+              {
+                step: "1",
+                title: "Submit your intake form",
+                description:
+                  "Fill out an async questionnaire describing your organization, workflows, and goals.",
+              },
+              {
+                step: "2",
+                title: "We build & deliver",
+                description:
+                  "You receive your audit report, documentation, or build deliverables — fully written and recorded.",
+              },
+              {
+                step: "3",
+                title: "Implement with support",
+                description:
+                  "Access your ticket portal anytime to ask questions or request updates. No scheduling required.",
+              },
+            ].map((item) => (
+              <div key={item.step} className="flex gap-4">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-500 text-sm font-bold text-white">
+                  {item.step}
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-neutral-900">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-sm leading-relaxed text-neutral-600">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-white py-16">
         <div className="mx-auto max-w-2xl px-6 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
-            Not sure where to start?
+          <h2 className="text-2xl font-bold tracking-tight text-neutral-900 sm:text-3xl">
+            Ready to get started?
           </h2>
           <p className="mt-4 text-neutral-600">
-            Browse our ready-made toolkits — most organizations find exactly
-            what they need without any custom work.
+            Most organizations start with a ready-made toolkit. Need something
+            custom? Submit an intake form — no call needed.
           </p>
-          <a
-            href="/products"
-            className="mt-8 inline-block rounded-lg bg-brand-500 px-8 py-3.5 text-sm font-medium text-white transition-colors hover:bg-brand-600"
-          >
-            Browse Products
-          </a>
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a
+              href="/products"
+              className="rounded-lg bg-brand-500 px-8 py-3.5 text-sm font-medium text-white transition-colors hover:bg-brand-600"
+            >
+              Browse Products
+            </a>
+            <a
+              href="https://tally.so/r/flostead-intake"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-neutral-300 px-8 py-3.5 text-sm font-medium text-neutral-700 transition-colors hover:border-brand-500 hover:text-brand-500"
+            >
+              Apply for Custom Work
+            </a>
+          </div>
+          <p className="mt-4 text-xs text-neutral-400">
+            Custom work intake is async — no call or meeting required.
+          </p>
         </div>
       </section>
     </>

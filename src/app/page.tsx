@@ -90,6 +90,63 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* How It Works */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
+              Everything works without a call
+            </h2>
+            <p className="mt-4 text-neutral-600">
+              FloStead is built to be fully self-serve. Browse, buy, and
+              implement — on your schedule.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-8 sm:grid-cols-3">
+            {[
+              {
+                step: "1",
+                title: "Pick your toolkit",
+                description:
+                  "Browse our products page and choose the template, blueprint, or audit that fits your situation.",
+              },
+              {
+                step: "2",
+                title: "Download instantly",
+                description:
+                  "Purchase through Gumroad and get immediate access. No waiting, no scheduling.",
+              },
+              {
+                step: "3",
+                title: "Implement at your pace",
+                description:
+                  "Follow the included guides and videos to put your new systems in place — on your own timeline.",
+              },
+            ].map((item) => (
+              <div key={item.step} className="flex gap-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-500 text-sm font-bold text-white">
+                  {item.step}
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-neutral-900">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-sm leading-relaxed text-neutral-600">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="mt-10 text-center text-sm text-neutral-500">
+            Need custom work?{" "}
+            <a href="/services" className="font-medium text-brand-500 hover:text-brand-600">
+              View async services &rarr;
+            </a>
+          </p>
+        </div>
+      </section>
+
       {/* Problem */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-6xl px-6">
