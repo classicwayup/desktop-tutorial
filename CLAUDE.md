@@ -214,7 +214,8 @@ FloStead is a **fully faceless, async business**. No calls, no live meetings, no
     - Free: SOP Template, Onboarding Checklist, Volunteer Coordination Workflow
     - Premium: Process Audit Worksheet ($17), Monthly Board Report Template ($27), Donor Acknowledgment Automation Guide ($37)
 27. Added Premium Templates anchor link to footer Resources column
-28. Added Grant Infrastructure & AI Proposal Builder ($197) to Products page
+28. Added Grant Infrastructure & AI Proposal Builder ($197) to Products page — merged to main, live on flostead.com
     - Placeholder Gumroad URL: flostead.gumroad.com/l/grant-builder (update when listing is live)
     - Targets nonprofits, workforce boards, community-based organizations
     - Includes: grant readiness assessment, logic model builder, outcomes framework, budget narrative template, compliance language bank, AI prompt library, multi-format files
+29. Added CLAUDE.md to ~/flostead repo (checked into git) for persistent project context
