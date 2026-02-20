@@ -223,3 +223,5 @@ FloStead is a **fully faceless, async business**. No calls, no live meetings, no
     - TXT record: google-site-verification=52528Y1d06KfFv2rwPlHHCXb1nh_-XsLpCneMG5cwtk (rec_d7823eb27be7d802d4f70680)
     - CNAME record: gv-nthoikxwlfqn7i → gv-nthoikxwlfqn7i.dv.googlehosted.com (rec_dc2528ec8d6e5f9658dd64d4)
     - CNAME record: m23qsi2ke33x → m23qsi2ke33x.dv.googlehosted.com (rec_a4a46951c385fa1f9ca6d0ac)
+    - MX record: @ priority 1 → SMTP.GOOGLE.COM (rec_508cf9de13e81c2e557ac2e1)
+    - TXT record (DKIM): google._domainkey → v=DKIM1;k=rsa;p=MIIBIjAN... (rec_ed6a58091f83392dafc1526c)
