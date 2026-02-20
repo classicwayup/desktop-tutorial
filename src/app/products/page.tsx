@@ -66,6 +66,23 @@ const products = [
     gumroadUrl: "https://flostead.gumroad.com/l/mini-audit",
     highlighted: false,
   },
+  {
+    name: "Grant Infrastructure & AI Proposal Builder",
+    price: "$197",
+    description:
+      "A systems-based funding toolkit for nonprofits, workforce boards, and community-based organizations. Build internal grant readiness, standardize proposal workflows, and accelerate drafting with AI — no freelance writer required.",
+    features: [
+      "Grant readiness assessment",
+      "Logic model builder",
+      "Outcomes & performance metrics framework",
+      "Budget narrative template",
+      "Compliance-aligned language bank (workforce & aging services)",
+      "AI prompt library for structured proposal drafting",
+      "Multi-format files: PDF, .DOCX, and Excel-compatible",
+    ],
+    gumroadUrl: "https://flostead.gumroad.com/l/grant-builder",
+    highlighted: false,
+  },
 ];
 
 export default function ProductsPage() {
