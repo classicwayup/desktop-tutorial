@@ -225,3 +225,58 @@ FloStead is a **fully faceless, async business**. No calls, no live meetings, no
     - CNAME record: m23qsi2ke33x → m23qsi2ke33x.dv.googlehosted.com (rec_a4a46951c385fa1f9ca6d0ac)
     - MX record: @ priority 1 → SMTP.GOOGLE.COM (rec_508cf9de13e81c2e557ac2e1)
     - TXT record (DKIM): google._domainkey → v=DKIM1;k=rsa;p=MIIBIjAN... (rec_ed6a58091f83392dafc1526c)
+31. Built Supabase digital product delivery infrastructure (PR #8 — pending merge)
+    - Supabase project: todjwzjcltoyolbmpzoy (linked via CLI)
+    - DB migration: products, purchases, download_tokens tables with Row Level Security
+    - All 5 products seeded in products table
+    - Private storage bucket: `products` (50MB file limit, signed URLs)
+    - Edge Function deployed: `deliver-product` — records purchase, generates 48h expiring signed URL, sends download email via Resend
+    - Stripe webhook handler stubbed in Edge Function (activates when Stripe is connected)
+    - Resend API key set as Edge Function secret
+    - .env.local created locally (gitignored) with all credentials
+
+## Digital Delivery Infrastructure
+
+### Supabase
+- **Project URL:** https://todjwzjcltoyolbmpzoy.supabase.co
+- **Project ref:** todjwzjcltoyolbmpzoy
+- **CLI auth:** Personal access token stored in session (`sbp_45c...`)
+- **Storage bucket:** `products` (private, 50MB limit)
+- **Edge Function:** `deliver-product` — POST with `{product_slug, customer_email}` triggers full delivery flow
+- **Local credentials:** `~/flostead/.env.local` (gitignored)
+
+### Resend
+- **Purpose:** Transactional email only — sends purchase confirmation + download link
+- **From address:** noreply@flostead.com
+- **API key:** stored in `.env.local` and as Supabase Edge Function secret
+- **Pending:** flostead.com domain verification in Resend dashboard
+
+### Stripe (pending)
+- **Status:** Not yet connected
+- **When ready:** Add `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET` to `.env.local` and Supabase secrets
+- **Webhook endpoint:** `https://todjwzjcltoyolbmpzoy.supabase.co/functions/v1/deliver-product`
+
+### Delivery Flow
+```
+Customer pays (Stripe) →
+Stripe webhook → deliver-product Edge Function →
+  • Record purchase in DB
+  • Generate 48h expiring signed URL from Supabase Storage
+  • Send download email via Resend →
+Customer receives link, downloads file, link expires
+```
+
+### CLI Commands for Product Management
+```bash
+# Upload a product file
+npx supabase storage cp ./file.zip ss:///products/products/slug.zip
+
+# Redeploy Edge Function after changes
+SUPABASE_ACCESS_TOKEN=<token> npx supabase functions deploy deliver-product --no-verify-jwt
+
+# Push a new DB migration
+SUPABASE_ACCESS_TOKEN=<token> npx supabase db push
+
+# Check Edge Function logs
+SUPABASE_ACCESS_TOKEN=<token> npx supabase functions logs deliver-product
+```
