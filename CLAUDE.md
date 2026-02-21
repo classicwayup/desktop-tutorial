@@ -248,8 +248,19 @@ FloStead is a **fully faceless, async business**. No calls, no live meetings, no
 ### Resend
 - **Purpose:** Transactional email only — sends purchase confirmation + download link
 - **From address:** noreply@flostead.com
-- **API key:** stored in `.env.local` and as Supabase Edge Function secret
-- **Pending:** flostead.com domain verification in Resend dashboard
+- **Domain ID:** b2387f7e-3151-4b26-921d-222f31545158
+- **Domain status:** pending DNS propagation (records added 2026-02-20)
+- **Sending API key:** stored in `.env.local` and as Supabase Edge Function secret
+- **Admin API key:** stored in `.env.local` (domain management)
+- **DNS records added to flostead.com via Vercel CLI:**
+  - TXT `resend._domainkey` → DKIM public key (rec_d68b4da05fa3da55199bab44)
+  - MX `send` → feedback-smtp.us-east-1.amazonses.com priority 10 (rec_52c72de592f3616daf348961)
+  - TXT `send` → v=spf1 include:amazonses.com ~all (rec_0ae1e9c721ca9ebac537ad04)
+- **Verify status via CLI:**
+  ```bash
+  curl -s "https://api.resend.com/domains/b2387f7e-3151-4b26-921d-222f31545158" \
+    -H "Authorization: Bearer <admin-key>" | python3 -m json.tool
+  ```
 
 ### Stripe (pending)
 - **Status:** Not yet connected
