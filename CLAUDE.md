@@ -225,3 +225,7 @@ FloStead is a **fully faceless, async business**. No calls, no live meetings, no
     - CNAME record: m23qsi2ke33x → m23qsi2ke33x.dv.googlehosted.com (rec_a4a46951c385fa1f9ca6d0ac)
     - MX record: @ priority 1 → SMTP.GOOGLE.COM (rec_508cf9de13e81c2e557ac2e1)
     - TXT record (DKIM): google._domainkey → v=DKIM1;k=rsa;p=MIIBIjAN... (rec_ed6a58091f83392dafc1526c)
+31. Renamed Services page service names for brand consistency (PR #9 — merged to main, live on flostead.com)
+    - "Flow Audit" → "Flo Audit"
+    - "Flow Build" → "Flo Build"
+    - "FloSteady Retainer" was already correct
