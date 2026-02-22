@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    name: "Flow Audit",
+    name: "Flo Audit",
     price: "$2,500",
     description:
       "A comprehensive review of your organization's workflows, tools, and team processes. Submit your info asynchronously and receive a detailed roadmap for improvement — no meetings required.",
@@ -23,7 +23,7 @@ const services = [
     ideal: "Organizations that know something is broken but aren't sure where to start.",
   },
   {
-    name: "Flow Build",
+    name: "Flo Build",
     price: "$7,500 – $12,500",
     description:
       "We design and implement your new workflow systems end-to-end. From SOPs and automations to recorded training — we build it, test it, and hand it over ready to run.",
