@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-neutral-200 pt-6 text-center text-xs text-neutral-400">
-          &copy; {new Date().getFullYear()} FloStead. All rights reserved.
+          &copy; {new Date().getFullYear()} FloStead&#8482;. All rights reserved.
         </div>
       </div>
     </footer>

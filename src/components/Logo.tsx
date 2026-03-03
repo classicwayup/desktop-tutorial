@@ -16,7 +16,7 @@ export default function Logo({ className = "" }: { className?: string }) {
         <rect x="0" y="42" width="30" height="8" rx="4" fill="#6BA9E0" />
       </svg>
       <span className="text-xl font-bold text-neutral-900">
-        Flo<span className="text-brand-500">Stead</span>
+        Flo<span className="text-brand-500">Stead</span><sup className="text-xs font-normal text-neutral-400 align-super leading-none">™</sup>
       </span>
     </Link>
   );
