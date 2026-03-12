@@ -230,4 +230,4 @@ FloStead is a **fully faceless, async business**. No calls, no live meetings, no
     - "Flow Audit" → "Flo Audit"
     - "Flow Build" → "Flo Build"
     - "FloSteady Retainer" was already correct
-32. Updated footer legal copyright year from 2025 to 2026 (PR #12 — pending merge)
+32. Updated footer legal copyright year from 2025 to 2026 (PR #12 — merged to main, live on flostead.com)
