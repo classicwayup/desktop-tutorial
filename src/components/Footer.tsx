@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-neutral-200 pt-6 text-center text-xs text-neutral-400">
-          <p>&copy; 2025 C.A.M. Strategies LLC. All rights reserved.</p>
+          <p>&copy; 2026 C.A.M. Strategies LLC. All rights reserved.</p>
           <p className="mt-1">FloStead&#8482; is a trademark of C.A.M. Strategies LLC.</p>
         </div>
       </div>
