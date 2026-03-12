@@ -28,6 +28,7 @@ FloStead is a Next.js 14 website built with TypeScript and Tailwind CSS. It serv
 ├── src/components/
 │   ├── Navbar.tsx            # Navigation bar
 │   ├── Footer.tsx            # Footer
+│   ├── Logo.tsx              # Logo component
 │   └── ConvertKitForm.tsx    # Email signup form
 ├── package.json
 ├── tailwind.config.ts
@@ -229,3 +230,4 @@ FloStead is a **fully faceless, async business**. No calls, no live meetings, no
     - "Flow Audit" → "Flo Audit"
     - "Flow Build" → "Flo Build"
     - "FloSteady Retainer" was already correct
+32. Updated footer legal copyright year from 2025 to 2026 (PR #12 — pending merge)
